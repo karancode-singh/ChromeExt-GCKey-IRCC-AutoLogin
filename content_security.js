@@ -1,16 +1,18 @@
 $(window).on("load", () => {
-    setTimeout(() => {
-        if ($('strong')[0].innerText == '\"<>\"') { //replace <> with your security question 1
-            $('#answer').val('<>'); //replace <> with answer to your security question 1
-        } else if ($('strong')[0].innerText == '\"<>\"') { //replace <> with your security question 2
-            $('#answer').val('<>'); //replace <> with your security question 2
-        } else if ($('strong')[0].innerText == '\"<>\"') { //replace <> with your security question 3
-            $('#answer').val('<>'); //replace <> with your security question 3
-        } else if ($('strong')[0].innerText == '\"<>\"') { //replace <> with your security question 4
-            $('#answer').val('<>'); //replace <> with your security question 4
-        }
-    }, 100);
-    setTimeout(() => {
-        $('.btn-primary')[0].click()
-    }, 200);
+    chrome.storage.sync.get(['q1', 'a1', 'q2', 'a2', 'q3', 'a3', 'q4', 'a4'], function (items) {
+        setTimeout(() => {
+            if ($('strong')[0].innerText == '\"'+items['q1']+'\"') {
+                $('#answer').val('a1');
+            } else if ($('strong')[0].innerText == '\"'+items['q2']+'\"') {
+                $('#answer').val(items['a2']);
+            } else if ($('strong')[0].innerText == '\"'+items['q3']+'\"') {
+                $('#answer').val(items['a3']);
+            } else if ($('strong')[0].innerText == '\"'+items['q4']+'\"') {
+                $('#answer').val(items['a4']);
+            }
+        }, 100);
+        setTimeout(() => {
+            $('.btn-primary')[0].click()
+        }, 200);
+    })
 });

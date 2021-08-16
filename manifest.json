@@ -1,9 +1,10 @@
 {
 	"manifest_version": 2,
-	"name": "IRCC Check",
-	"description": "jO's Chrome Extension for IRCC Login Automation",
+	"name": "GCKey-IRCC Login Automation",
+	"description": "Chrome Extension for GCKey-IRCC Login Automation",
 	"version": "1.0",
 	"permissions": [
+		"storage",
 		"tabs",
 		"<all_urls>"
 	],
@@ -14,6 +15,7 @@
 		},
 		"default_popup": "popup.html"
 	},
+	"options_page" : "options.html",
 	"content_scripts": [
 		{
 			"matches": [
