@@ -6,7 +6,10 @@
 	"permissions": [
 		"storage",
 		"tabs",
-		"<all_urls>"
+		"https://clegc-gckey.gc.ca/*",
+		"https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
+		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/termsAndConditions",
+		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/askSecurityQuestion"
 	],
 	"browser_action": {
 		"default_icon": {
@@ -15,7 +18,7 @@
 		},
 		"default_popup": "popup.html"
 	},
-	"options_page" : "options.html",
+	"options_page": "options.html",
 	"content_scripts": [
 		{
 			"matches": [
@@ -32,7 +35,7 @@
 			],
 			"js": [
 				"jquery-3.1.0.min.js",
-				"content_login.js"				
+				"content_login.js"
 			]
 		},
 		{
