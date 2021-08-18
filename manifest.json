@@ -1,17 +1,18 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "GCKey-IRCC Login Automation",
 	"description": "Chrome Extension for GCKey-IRCC Login Automation",
 	"version": "1.0",
 	"permissions": [
-		"storage",
-		"tabs",
+		"storage"
+	],
+	"host_permissions" : [
 		"https://clegc-gckey.gc.ca/*",
 		"https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
 		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/termsAndConditions",
 		"https://onlineservices-servicesenligne.cic.gc.ca/mycic/askSecurityQuestion"
 	],
-	"browser_action": {
+	"action": {
 		"default_icon": {
 			"19": "images/icons/19.png",
 			"38": "images/icons/38.png"

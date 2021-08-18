@@ -5,20 +5,37 @@
     <title>GCKey-IRCC Login Automation</title>
     <script src="jquery-3.1.0.min.js"></script>
     <script src="popup.js"></script>
+    <style type="text/css">
+        body {
+            min-width: 500px;
+            max-width: 100%;
+            position: relative;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>GCKey-IRCC Login Automation</h2>
-    <button id="gckey">Go to GCKey</button><br><br>
-    <button id="options">Go to Options</button>
-    <h4>Set your login credentials by going to the 'options' page.</h4>
+    <div style="float: right;">
+        <br>
+        <button id="gckey">Go to GCKey</button><br><br>
+        <button id="options">Go to Options</button>
+    </div>
     <br>
+    <h2>GCKey-IRCC Login Automation</h2>
+    <br><br>
+    <h4>Working: Click on "Go to GCKey" button. If credentials are set, it will log you in to GCKey. If credentials are not set, you will be redirected to 'options' page to set credentials first.</h4>
+    <h4>Change your login credentials by going to the 'options' page.</h4>
     <p>
-        Note: This extension might not function properly until all the fields on the options page are filled correctly and saved. <br>
+        <b>Pro-Tip: </b>GCKey website often has issues while logging-in. You can often be redirected to "https://www.cic.gc.ca/". Simple solution is to click on extension button and click on the "Go to GCKey" button which will re-attempt the login. If the issue persists, repeat! Generally you should be able to login by 5th-6th try. If not, then there is some major issue with the GCKey website and you should wait for sometime and then try again.
+    </p>
+    <p>
+        <b>Note: </b>This extension might not function properly until all the fields on the options page are filled correctly
+        and saved. <br>
         The extension will not be maintained. Therefore, it is possible that it stops working if IRCC changes the GCKey
         login pages/process.</p>
     <p>
-        Disclaimer: This extension comes with no warranty. The only use of this exetension is to automate login on the
+        <b>Disclaimer: </b>This extension comes with no warranty. The only use of this exetension is to automate login on the
         GCKey Website. Please take care of your login information. The developer is not responsible for any loss of your
         personal data/information or any problems you might face. Please use this at your own risk.</p>
 </body>
