@@ -1,3 +1,5 @@
+Chrome store link: https://chrome.google.com/webstore/detail/gckey-ircc-login-automati/oioaedfmdohacpmifckjanhjjpcaipdc
+
 # Chrome Extension for Automated Login to GCKey IRCC Account
 
 ## Setup
